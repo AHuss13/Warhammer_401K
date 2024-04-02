@@ -3,4 +3,7 @@ CREATE DATABASE warhammer_db;
 
 USE warhammer_db;
 
-CREATE TABLE 
+CREATE TABLE army (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL
+);
