@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Bolt Pistol",
+        "range": "12",
+        "attack": "1",
+        "ballistic": "3",
+        "strength": "4",
+        "armor_pierce": "0",
+        "damage": "1"
+    },
+    {
+        "name": "Boltgun",
+        "range": "24",
+        "attack": "2",
+        "ballistic": "3",
+        "strength": "4",
+        "armor_pierce": "0",
+        "damage": "1"
+    },
+    {
+        "name": "Lasgun",
+        "range": "24",
+        "attack": "1",
+        "ballistic": "4",
+        "strength": "3",
+        "armor_pierce": "0",
+        "damage": "1"
+    }
+]
