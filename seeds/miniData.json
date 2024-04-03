@@ -1,0 +1,24 @@
+[
+    {
+    "name": "Cadian Shock Troops",
+    "movement": "6",
+    "toughness": "3",
+    "save": "5",
+    "wounds": "1",
+    "leadership": "7",
+    "objective": "2",
+    "ballistic": "4",
+    "weapon": "4"
+    },
+    {
+    "name": "Space Marine Tactical Squad",
+    "movement": "6",
+    "toughness": "4",
+    "save": "3",
+    "wounds": "2",
+    "leadership": "6",
+    "objective": "2",
+    "ballistic": "3",
+    "weapon": "3"
+    }
+]
