@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js",
-    "dev": "tailwindcss -i ./public/css/style.css -o ./public/css/output.css --watch"
+    "css": "tailwindcss -i ./public/css/style.css -o ./public/css/output.css --watch",
+    "dev": "concurrently \“npm run start\” \“npm run css\"",
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2",
