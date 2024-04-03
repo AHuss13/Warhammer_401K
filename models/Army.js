@@ -36,3 +36,4 @@ Army.init(
         modelName: 'army',
     }
 );
+module.exports = Army;
