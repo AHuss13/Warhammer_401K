@@ -1,10 +1,10 @@
 const sequelize = require('../config/connection');
 //Names changing
-const { Army, User, Model, Wargear } = require('../models');
+const { Army, User, Mini, Wargear } = require('../models');
 
 const userData = require('./userData.json');
 const armyData = require('./armyData.json');
-const modelData = require('./modelData.json');
+const miniData = require('./miniData.json');
 const wargearData = require('./wargearData.json');
 
 //*****************
@@ -21,7 +21,7 @@ async function seedDatabase() {
         });
 
         await Army.bulkCreate(armys);
-        await Model.bulkCreate(models);
+        await Mini.bulkCreate(minis);
         await Wargear.bulkCreate(wargears);
 
         console.log('Database seeded succesfully.');

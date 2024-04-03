@@ -1,6 +1,6 @@
 const User = require('./User');
 const Army = require('./Army');
-const Model = require('./Model');
+const Mini = require('./Mini');
 const Wargear = require('./Wargear');
 
 User.hasMany(Army, {
@@ -12,14 +12,14 @@ User.hasMany(Army, {
     foreignKey: 'user_id'
   });
 
-  Model.belongsTo(Army, {
+  Mini.belongsTo(Army, {
     foreignKey: 'army_id'
   });
 
   Wargear.belongsToMany(Model, {
-    foreignKey: 'model_id'
+    foreignKey: 'mini_id'
   });
   
   
 
-  module.exports = { User, Army, Project, Wargear };
+  module.exports = { User, Army, Mini, Wargear };
