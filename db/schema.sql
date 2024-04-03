@@ -2,13 +2,3 @@ DROP DATABASE IF EXISTS warhammer_db;
 CREATE DATABASE warhammer_db;
 
 USE warhammer_db;
-
-CREATE TABLE army (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL
-);
-
-CREATE TABLE model (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    
-)
