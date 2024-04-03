@@ -13,7 +13,7 @@ Mini.init(
             unique: true,
         },
         name: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         movement: {
