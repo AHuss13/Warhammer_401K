@@ -6,7 +6,9 @@
     "save": "5",
     "wounds": "1",
     "leadership": "7",
-    "objective": "2"
+    "objective": "2",
+    "ballistic": "4",
+    "weapon": "4"
     },
     {
     "name": "Space Marine Tactical Squad",
@@ -15,6 +17,8 @@
     "save": "3",
     "wounds": "2",
     "leadership": "6",
-    "objective": "2"
+    "objective": "2",
+    "ballistic": "3",
+    "weapon": "3"
     }
 ]
