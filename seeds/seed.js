@@ -20,9 +20,9 @@ async function seedDatabase() {
             returning: true,
         });
 
-        await Army.bulkCreate(armys);
-        await Mini.bulkCreate(minis);
-        await Wargear.bulkCreate(wargears);
+        await Army.bulkCreate(armyData);
+        await Mini.bulkCreate(miniData);
+        await Wargear.bulkCreate(wargearData);
 
         console.log('Database seeded succesfully.');
     } catch (error) {
