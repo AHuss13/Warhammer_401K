@@ -27,7 +27,7 @@ router.get('/army', async (req, res) => {
     }
   });
 
-  router.get('/army', async (req, res) => {
+  router.get('/wargear', async (req, res) => {
     try {
       res.status(200).json(`going to database... got your army... here it is: ${req.body.name}`);
     } catch (err) {
