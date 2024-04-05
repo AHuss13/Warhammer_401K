@@ -4,6 +4,7 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 
 // When a request is made to the /api route, it will be directed to the index.js in the 'api' folder.
+//second station for routes
 router.use('/api', apiRoutes);
 
 module.exports = router;
