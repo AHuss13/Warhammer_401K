@@ -27,6 +27,14 @@ router.get('/army', async (req, res) => {
     }
   });
 
+  router.get('/army', async (req, res) => {
+    try {
+      res.status(200).json(`going to database... got your army... here it is: ${req.body.name}`);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
 router.delete('/deletetapi', async (req, res) => {
 try {
     res.status(200).json("DELETED TABI LOL!!!!!!!!!!!!!!!");

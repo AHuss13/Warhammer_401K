@@ -16,7 +16,7 @@ User.hasMany(Army, {
     foreignKey: 'army_id'
   });
 
-  Wargear.belongsToMany(Model, {
+  Wargear.belongsToMany(Mini, {
     foreignKey: 'mini_id'
   });
   
