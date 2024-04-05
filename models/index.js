@@ -8,7 +8,7 @@ User.hasMany(Army, {
     onDelete: 'CASCADE'
   });
   
-  Army.belongsToMany(User, {
+  Army.belongsTo(User, {
     foreignKey: 'user_id'
   });
 
@@ -16,7 +16,7 @@ User.hasMany(Army, {
     foreignKey: 'army_id'
   });
 
-  Wargear.belongsToMany(Mini, {
+  Wargear.belongsTo(Mini, {
     foreignKey: 'mini_id'
   });
   
