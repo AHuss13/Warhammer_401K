@@ -3,6 +3,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // If a POST request is made to /api/users, a new user is created. The user id and logged in state is saved to the session within the request object.
+//http://localhost:3001/api/users/
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -19,6 +20,7 @@ router.post('/', async (req, res) => {
 });
 
 // If a POST request is made to /api/users/login, the function checks to see if the user information matches the information in the database and logs the user in. If correct, the user ID and logged-in state are saved to the session within the request object.
+//http://localhost:3001/api/users/login
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -52,6 +54,7 @@ router.post('/login', async (req, res) => {
 });
 
 // If a POST request is made to /api/users/logout, the function checks the logged_in state in the request.session object and destroys that session if logged_in is true.
+//http://localhost:3001/api/users/logout
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
