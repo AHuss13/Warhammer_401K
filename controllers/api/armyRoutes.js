@@ -3,7 +3,10 @@ const router = require('express').Router();
 //http://localhost:3001/api/army/
 router.get('/', async (req, res) => {
   try {
-    res.status(200).json("HELLO WORLD!!!!!!!!!!!!!!!");
+    //res.status(200).json("HELLO WORLD!!!!!!!!!!!!!!!");
+    res.render('homepage', { 
+      title: 'Homepage'
+    });
   } catch (err) {
     res.status(400).json(err);
   }
