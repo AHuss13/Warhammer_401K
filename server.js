@@ -42,5 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening at http://localhost:3001/api/army')); // (This is just where I know works)
+  app.listen(PORT, () => console.log('Now listening at http://localhost:3001/api/army')); // This is just where I know works
 });
+
+//Seeing if this will push to main
