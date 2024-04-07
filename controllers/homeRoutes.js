@@ -52,4 +52,16 @@ router.get('/login/', async (req, res) => {
   }
 });
 
+//http://localhost:3001/profile
+router.get('/profile', async (req, res) => {
+  try {
+    //res.status(200).json("HELLO WORLD!!!!!!!!!!!!!!!");
+    res.render('profile', { 
+      title: 'Profile'
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
