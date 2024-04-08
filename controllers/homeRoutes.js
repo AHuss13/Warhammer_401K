@@ -30,9 +30,11 @@ router.get('/login/', async (req, res) => {
 //http://localhost:3001/profile
 router.get('/profile', async (req, res) => {
   try {
-    //res.status(200).json("HELLO WORLD!!!!!!!!!!!!!!!");
+    const armies = await Army.findAll();
+    const armyNames = armies.map(army => army.name);
     res.render('profile', { 
-      title: 'Profile'
+      title: 'Profile',
+      armyNames: armyNames
     });
   } catch (err) {
     res.status(400).json(err);
