@@ -28,7 +28,7 @@
     </form>
   </div>
 
-  {{#if armys.length}}
+  {{!-- {{#if armys.length}}
   <div class="col-md-6 army-list">
     <h3>Current armys:</h3>
 
@@ -44,7 +44,18 @@
     {{/each}}
   </div>
   {{/if}}
-</div>
+</div> --}}
+
+ {{#if armyNames.length}}
+    <h2>Army Names:</h2>
+    <ul>
+      {{#each armyNames as |armyName|}}
+        <li>{{armyName}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>No army names available.</p>
+  {{/if}}
 
 <script src="./js/profile.js"></script>
 
