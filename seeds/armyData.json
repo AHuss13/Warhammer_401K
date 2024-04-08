@@ -1,10 +1,12 @@
 [
     {
         "name": "Space Marines",
-        "description": "Super Soldiers"
+        "description": "Super Soldiers",
+        "user_id": 1
     },
     {
         "name": "Astra Militarum",
-        "description": "Cannon Fodder"
+        "description": "Cannon Fodder",
+        "user_id": 2
     }
 ]
