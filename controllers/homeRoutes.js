@@ -16,7 +16,7 @@ router.get('/', async (req, res) => { // browser path
 
 
 //http://localhost:3001/login
-router.get('/login/', async (req, res) => {
+router.get('/login', async (req, res) => {
   try {
     //res.status(200).json("HELLO WORLD!!!!!!!!!!!!!!!");
     res.render('login', { 
