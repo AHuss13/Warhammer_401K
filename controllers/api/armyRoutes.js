@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
 });
 
 // router.get('/soldier', async (req, res)
+
 //http://localhost:3001/api/army/army
 router.get('/army', async (req, res) => {
     try {
@@ -18,6 +19,7 @@ router.get('/army', async (req, res) => {
       res.status(400).json(err);
     }
   });
+
 //http://localhost:3001/api/army/mini
   router.get('/mini', async (req, res) => {
     try {
@@ -27,6 +29,7 @@ router.get('/army', async (req, res) => {
       res.status(400).json(err);
     }
   });
+  
 //http://localhost:3001/api/army/wargear
   router.get('/wargear', async (req, res) => {
     try {
@@ -36,12 +39,5 @@ router.get('/army', async (req, res) => {
     }
   });
 
-// router.delete('/deletetapi', async (req, res) => {
-// try {
-//     res.status(200).json("DELETED TABI LOL!!!!!!!!!!!!!!!");
-// } catch (err) {
-//     res.status(400).json(err);
-// }
-// });
 
   module.exports = router;
