@@ -7,7 +7,7 @@
     "start": "node server.js",
     "seed": "node seeds/seed.js",
     "css": "tailwindcss -i ./public/css/style.css -o ./public/css/output.css --watch",
-    "dev": "concurrently \"npm run start\" \"npm run css\""
+    "dev": "concurrently \"npm run css\" \"npm run start\""
   },
   "keywords": [],
   "author": "",
