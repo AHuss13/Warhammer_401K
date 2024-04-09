@@ -16,7 +16,25 @@ router.post('/newarmy', withAuth, async (req, res) => {
   }
 });
 
+router.delete('/newarmy/:id', withAuth, async (req, res) => {
+  try {
+    const armyData = await Army.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
 
+    if (!armyData) {
+      res.status(404).json({ message: 'No project found with this id!' });
+      return;
+    }
+
+    res.status(200).json(armyData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 //http://localhost:3001/api/army/
