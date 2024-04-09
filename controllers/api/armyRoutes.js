@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Army } =require('../../models');
+const { Army , Mini , User} =require('../../models');
 const withAuth = require('../../utils/auth');
 
 http://localhost:3001/api/army/newarmy
@@ -20,20 +20,31 @@ router.post('/newarmy', withAuth, async (req, res) => {
 // HELP Not sure about this
 router.get('/newarmy/:id', async (req, res) => {
   try {
-    const armyData = await Army.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const army = armyData.get({ plain: true });
-
+    const armies = await Army.findAll()
+    const armyNames = armies.map(army => army.name);
+    //const minis = await Mini.findAll();
+    //const miniNames = minis.map(mini => mini.name);
+    
+    const userData = await User.findOne({
+      where: {id: req.session.user_id},
+      include: Army,
+      //plain: true
+      //include: Mini,
+            
+    }
+    );
+      //console.log(userData);
+    const userPlain = userData.get({plain: true});
+    console.log(userPlain)
     res.render('army', {
-      ...army,
-      logged_in: req.session.logged_in
+      title: 'Army',
+      armyNames: armyNames,
+      armies: armies,
+      userData: userPlain
+      //miniNames: miniNames,
+      //minis: minis,
+      //user: userData
+      // logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);

@@ -10,7 +10,20 @@
   <p>No army names available.</p>
 {{/if}}
 
+<h1>Current Army</h1>
+{{#each user.dataValues.armies}}
+  <li><strong>Army Name:</strong> {{ this.dataValues.name }}</li>
+  <li><strong>Description:</strong> {{ this.dataValues.description }}</li>
+        {{/each}}
 
+<div>
+  {{#each userData.armies as |user| }}
+  <h2>ARMY NAME</h2>
+  <p>{{user.name}}</p>
+  <h3>Army Description</h3>
+  <p>{{user.description}}</p>
+  {{/each}}
+</div>
 {{!-- <div class="text-center">
   <h2>{{name}}</h2>
   <p>{{{get_emoji}}}</p>
