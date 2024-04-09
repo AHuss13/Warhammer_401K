@@ -2,60 +2,60 @@
 
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2 id="profile">Welcome, {{name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New army:</h3>
+    <h3 id="profile">Create a New army:</h3>
 
-{{!-- Add new army --}}
-    <form class="form new-army-form">
+    {{!-- Add new army --}}
+    <form class="form new-army-form" id="profile">
       <div class="form-group">
         <label for="army-name">army name:</label>
         <input class="form-input" type="text" id="army-name" name="army-name" />
       </div>
-{{!-- Description of army --}}
-      </div>
-      <div class="form-group">
-        <label for="army-desc">description:</label>
-        <textarea class="form-input" id="army-desc" name="army-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
+      {{!-- Description of army --}}
   </div>
+  <div class="form-group" id="profile">
+    <label for="army-desc">description:</label>
+    <textarea class="form-input" id="army-desc" name="army-desc"></textarea>
+  </div>
+  <div class="form-group" id="profile">
+    <button type="submit" class="btn btn-primary">Create</button>
+  </div>
+  </form>
+</div>
 
-  {{!-- {{#if armys.length}}
-  <div class="col-md-6 army-list">
-    <h3>Current armys:</h3>
+{{!-- {{#if armys.length}}
+<div class="col-md-6 army-list">
+  <h3>Current armys:</h3>
 
-    {{#each armys as |army|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/army/{{army.id}}">{{army.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{army.id}}">DELETE</button>
-      </div>
+  {{#each armys as |army|}}
+  <div class="row mb-2">
+    <div class="col-md-8">
+      <h4><a href="/army/{{army.id}}">{{army.name}}</a></h4>
     </div>
-    {{/each}}
+    <div class="col-md-4">
+      <button class="btn btn-sm btn-danger" data-id="{{army.id}}">DELETE</button>
+    </div>
   </div>
-  {{/if}}
+  {{/each}}
+</div>
+{{/if}}
 </div> --}}
 
- {{#if armyNames.length}}
-    <h2>Army Names:</h2>
-    <ul>
-      {{#each armyNames as |armyName|}}
-        <li>{{armyName}}</li>
-      {{/each}}
-    </ul>
-  {{else}}
-    <p>No army names available.</p>
-  {{/if}}
+{{#if armyNames.length}}
+<h2>Army Names:</h2>
+<ul>
+  {{#each armyNames as |armyName|}}
+  <li>{{armyName}}</li>
+  {{/each}}
+</ul>
+{{else}}
+<p>No army names available.</p>
+{{/if}}
 
 <script src="./js/profile.js"></script>
 
