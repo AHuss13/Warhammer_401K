@@ -1,5 +1,9 @@
 const router = require('express').Router();
+<<<<<<< HEAD
 const { Army , Mini , User} =require('../../models');
+=======
+const { Army, User } =require('../../models');
+>>>>>>> 750bdeb95269697431fec90145c2395ab3e42b98
 const withAuth = require('../../utils/auth');
 
 http://localhost:3001/api/army/newarmy
