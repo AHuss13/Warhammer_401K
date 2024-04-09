@@ -28,24 +28,6 @@
   </form>
 </div>
 
-{{!-- {{#if armys.length}}
-<div class="col-md-6 army-list">
-  <h3>Current armys:</h3>
-
-  {{#each armys as |army|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
-      <h4><a href="/army/{{army.id}}">{{army.name}}</a></h4>
-    </div>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" data-id="{{army.id}}">DELETE</button>
-    </div>
-  </div>
-  {{/each}}
-</div>
-{{/if}}
-</div> --}}
-
 <h1>Current Army</h1>
 {{#each user.dataValues.armies}}
   <li><strong>Army Name:</strong> {{ this.dataValues.name }}</li>
@@ -63,7 +45,23 @@
 <p>No army names available.</p>
 {{/if}}
 
+{{#if armies.length}}
+<div class="col-md-6 army-list">
+  <h3>Current armies:</h3>
 
+  {{#each armies as |army|}}
+  <div class="row mb-2">
+    <div class="col-md-8">
+      <h4><a href="/army/{{army.id}}">{{army.name}}</a></h4>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-sm btn-danger" data-id="{{army.id}}">DELETE</button>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+</div>
 
 <script src="./js/profile.js"></script>
 
