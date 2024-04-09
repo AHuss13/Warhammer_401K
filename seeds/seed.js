@@ -29,7 +29,9 @@ async function seedDatabase() {
         console.error('Error seeding database:', error);
     }
 
-    process.exit(0);
+    // process.exit(0);
 };
 
-seedDatabase();
+//seedDatabase();
+
+module.exports = seedDatabase;
