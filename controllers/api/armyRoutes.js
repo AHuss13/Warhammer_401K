@@ -1,4 +1,23 @@
 const router = require('express').Router();
+const { Army } =require('../../models');
+const withAuth = require('../../utils/auth');
+
+http://localhost:3001/api/army/newarmy
+router.post('/newarmy', withAuth, async (req, res) => {
+  try {
+    const newArmy = await Army.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(newArmy);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+
+
 
 //http://localhost:3001/api/army/
 router.get('/', async (req, res) => {
