@@ -52,7 +52,8 @@
   {{#each armies as |army|}}
   <div class="row mb-2">
     <div class="col-md-8">
-      <h4><a href="/army/{{army.id}}">{{army.name}}</a></h4>
+      {{!-- HELP --}}
+      <h4><a href="/api/army/newarmy/{{this.dataValues.id}}">{{this.dataValues.name}}</a></h4>
     </div>
     <div class="col-md-4">
       <button class="btn btn-sm btn-danger" data-id="{{army.id}}">DELETE</button>

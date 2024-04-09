@@ -16,6 +16,32 @@ router.post('/newarmy', withAuth, async (req, res) => {
   }
 });
 
+
+// HELP Not sure about this
+router.get('/newarmy/:id', async (req, res) => {
+  try {
+    const armyData = await Army.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const army = armyData.get({ plain: true });
+
+    res.render('army', {
+      ...army,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// HELP Not sure about this
+http://localhost:3001/api/army/:id
 router.delete('/newarmy/:id', withAuth, async (req, res) => {
   try {
     const armyData = await Army.destroy({
