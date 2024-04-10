@@ -1,40 +1,8 @@
-  <h1>Army Information</h1>
-  {{#if armyNames.length}}
-  <h3>Army Names:</h3>
-  <ul>
-    {{#each armyNames as |armyName|}}
-      <li>{{armyName}}</li>
-    {{/each}}
-  </ul>
-{{else}}
-  <p>No army names available.</p>
-{{/if}}
-
-<h1>Current Army</h1>
-{{#each user.dataValues.armies}}
-  <li><strong>Army Name:</strong> {{ this.dataValues.name }}</li>
-  <li><strong>Description:</strong> {{ this.dataValues.description }}</li>
-        {{/each}}
-
 <div>
-  {{#each userData.armies as |user| }}
+
   <h2>ARMY NAME</h2>
-  <p>{{user.name}}</p>
+  <p>{{army.name}}</p>
   <h3>Army Description</h3>
-  <p>{{user.description}}</p>
-  {{/each}}
+  <p>{{army.description}}</p>
+
 </div>
-{{!-- <div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div> --}}
