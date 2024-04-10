@@ -4,9 +4,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "concurrently \"npm run css\" \"node server.js\"",
     "seed": "node seeds/seed.js",
-    "css": "tailwindcss -i ./public/css/style.css -o ./public/css/output.css --watch"
+    "css": "tailwindcss -i ./public/css/style.css -o ./public/css/output.css --watch",
+    "dev": "concurrently \"npm run css\" \"node server.js\""
   },
   "keywords": [],
   "author": "",
