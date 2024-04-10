@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Army } =require('../../models');
+const { Army , Mini , User} =require('../../models');
 const withAuth = require('../../utils/auth');
 
 http://localhost:3001/api/army/newarmy
@@ -17,6 +17,63 @@ router.post('/newarmy', withAuth, async (req, res) => {
 });
 
 
+// HELP Not sure about this
+router.get('/newarmy/:id', async (req, res) => {
+  try {
+    const armies = await Army.findByPk(req.params.id)
+    const army = armies.get({plain: true});
+    // const armyNames = armies.map(army => army.name);
+    //const minis = await Mini.findAll();
+    //const miniNames = minis.map(mini => mini.name);
+    console.log(army)
+    const userData = await User.findOne({
+      where: {id: req.session.user_id},
+      include: Army,
+      //plain: true
+      //include: Mini,
+            
+    }
+    );
+      //console.log(userData);
+    const userPlain = userData.get({plain: true});
+    // console.log(userPlain)
+    res.render('army', {
+      title: 'Army',
+      // armyNames: armyNames,
+      armies: armies,
+      userData: userPlain,
+      army: army
+      //miniNames: miniNames,
+      //minis: minis,
+      //user: userData
+      // logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// HELP Not sure about this
+http://localhost:3001/api/army/:id
+router.delete('/newarmy/:id', withAuth, async (req, res) => {
+  try {
+    const armyData = await Army.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!armyData) {
+      res.status(404).json({ message: 'No project found with this id!' });
+      return;
+    }
+
+    res.status(200).json(armyData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 //http://localhost:3001/api/army/

@@ -40,6 +40,7 @@ router.get('/profile', async (req, res) => {
     res.render('profile', { 
       title: 'Profile',
       armyNames: armyNames,
+      armies: armies,
       user: userData
     });
   } catch (err) {
