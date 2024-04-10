@@ -1,23 +1,23 @@
-<div class="row">
+<div class="">
   <div class="col-auto">
     <h2 id="profile">Welcome, {{user.dataValues.name}}!</h2>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class="mt-4">
+  <div class="">
     <h3 id="profile">Create a New army:</h3>
 
     {{!-- Add new army --}}
-    <form class="form new-army-form" id="profile">
+    <form class="new-army-form" id="profile">
       <div class="">
-        <label for="army-name">army name:</label>
+        <label class="" for="army-name">Army name:</label>
         <input class="form-input" type="text" id="army-name" name="army-name" />
       </div>
       {{!-- Description of army --}}
   </div>
   <div class="" id="profile">
-    <label for="army-desc">description:</label>
+    <label for="army-desc">Description:</label>
     <textarea class="form-input" id="army-desc" name="army-desc"></textarea>
   </div>
   <div class="" id="profile">
@@ -27,15 +27,15 @@
 </div>
 
 <h1>{{user.dataValues.name}}'s Army List</h1>
-{{#each user.dataValues.armies}}
+  <div>{{#each user.dataValues.armies}}
 
-      <h4><a href="/api/army/newarmy/{{this.dataValues.id}}">{{this.dataValues.name}}</a></h4>
+  <h4><a href="/api/army/newarmy/{{this.dataValues.id}}">{{this.dataValues.name}}</a></h4>
 
   <li><strong>Army Name:</strong> {{ this.dataValues.name }}</li>
   <li><strong>Description:</strong> {{ this.dataValues.description }}</li>
   <br> </br>
-{{/each}}
-
+    {{/each}}
+  </div>
 </div>
 
 <script src="./js/profile.js"></script>
