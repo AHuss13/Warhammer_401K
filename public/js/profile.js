@@ -22,6 +22,26 @@ const newFormHandler = async (event) => {
     }
   };
 
+  const delButtonHandler = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/army/newarmy/${id}`, { //change
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert('Failed to delete army');
+      }
+    }
+  };
+
   document
   .querySelector('.new-army-form')
   .addEventListener('submit', newFormHandler);
+
+  document
+  .querySelector('.army-list')
+  .addEventListener('click', delButtonHandler);

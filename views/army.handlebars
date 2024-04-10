@@ -1,11 +1,8 @@
-  <h1>Army Information</h1>
-  {{#if armyNames.length}}
-  <h3>Army Names:</h3>
-  <ul>
-    {{#each armyNames as |armyName|}}
-      <li>{{armyName}}</li>
-    {{/each}}
-  </ul>
-{{else}}
-  <p>No army names available.</p>
-{{/if}}
+<div>
+
+  <h2>ARMY NAME</h2>
+  <p>{{army.name}}</p>
+  <h3>Army Description</h3>
+  <p>{{army.description}}</p>
+
+</div>
