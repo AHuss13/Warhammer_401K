@@ -20,11 +20,12 @@ router.post('/newarmy', withAuth, async (req, res) => {
 // HELP Not sure about this
 router.get('/newarmy/:id', async (req, res) => {
   try {
-    const armies = await Army.findAll()
-    const armyNames = armies.map(army => army.name);
+    const armies = await Army.findByPk(req.params.id)
+    const army = armies.get({plain: true});
+    // const armyNames = armies.map(army => army.name);
     //const minis = await Mini.findAll();
     //const miniNames = minis.map(mini => mini.name);
-    
+    console.log(army)
     const userData = await User.findOne({
       where: {id: req.session.user_id},
       include: Army,
@@ -35,12 +36,13 @@ router.get('/newarmy/:id', async (req, res) => {
     );
       //console.log(userData);
     const userPlain = userData.get({plain: true});
-    console.log(userPlain)
+    // console.log(userPlain)
     res.render('army', {
       title: 'Army',
-      armyNames: armyNames,
+      // armyNames: armyNames,
       armies: armies,
-      userData: userPlain
+      userData: userPlain,
+      army: army
       //miniNames: miniNames,
       //minis: minis,
       //user: userData

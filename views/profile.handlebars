@@ -1,5 +1,3 @@
-{{!-- This needs to be formally checked --}}
-
 <div class="row">
   <div class="col-auto">
     <h2 id="profile">Welcome, {{user.dataValues.name}}!</h2>
@@ -28,40 +26,16 @@
   </form>
 </div>
 
-<h1>Current Army</h1>
+<h1>{{user.dataValues.name}}'s Army List</h1>
 {{#each user.dataValues.armies}}
+
+      <h4><a href="/api/army/newarmy/{{this.dataValues.id}}">{{this.dataValues.name}}</a></h4>
+
   <li><strong>Army Name:</strong> {{ this.dataValues.name }}</li>
   <li><strong>Description:</strong> {{ this.dataValues.description }}</li>
-        {{/each}}
+  <br> </br>
+{{/each}}
 
-{{#if armyNames.length}}
-<h2>Army Names:</h2>
-<ul>
-  {{#each armyNames as |armyName|}}
-  <li>{{armyName}}</li>
-  {{/each}}
-</ul>
-{{else}}
-<p>No army names available.</p>
-{{/if}}
-
-{{#if armies.length}}
-<div class="col-md-6 army-list">
-  <h3>Current armies:</h3>
-
-  {{#each armies as |army|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
-      {{!-- HELP --}}
-      <h4><a href="/api/army/newarmy/{{this.dataValues.id}}">{{this.dataValues.name}}</a></h4>
-    </div>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" data-id="{{army.id}}">DELETE</button>
-    </div>
-  </div>
-  {{/each}}
-</div>
-{{/if}}
 </div>
 
 <script src="./js/profile.js"></script>
