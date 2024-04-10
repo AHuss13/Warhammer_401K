@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-auto">
-    <h2 id="profile">Welcome, {{name}}!</h2>
+    <h2 id="profile">Welcome, {{user.dataValues.name}}!</h2>
   </div>
 </div>
 
@@ -46,6 +46,12 @@
 {{/if}}
 </div> --}}
 
+<h1>Current Army</h1>
+{{#each user.dataValues.armies}}
+  <li><strong>Army Name:</strong> {{ this.dataValues.name }}</li>
+  <li><strong>Description:</strong> {{ this.dataValues.description }}</li>
+        {{/each}}
+
 {{#if armyNames.length}}
 <h2>Army Names:</h2>
 <ul>
@@ -56,6 +62,8 @@
 {{else}}
 <p>No army names available.</p>
 {{/if}}
+
+
 
 <script src="./js/profile.js"></script>
 

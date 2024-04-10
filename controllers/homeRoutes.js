@@ -33,9 +33,14 @@ router.get('/profile', async (req, res) => {
   try {
     const armies = await Army.findAll();
     const armyNames = armies.map(army => army.name);
+    const userData = await User.findOne({
+      where: { id: req.session.user_id},
+      include: Army,
+    });
     res.render('profile', { 
       title: 'Profile',
-      armyNames: armyNames
+      armyNames: armyNames,
+      user: userData
     });
   } catch (err) {
     res.status(400).json(err);
