@@ -1,6 +1,7 @@
 <div class='row'>
   <div class='' id='login'>
-    <h2 class="font-bold" id='login-header'>Login</h2>
+    <div class="mb-2">
+    <h2 class='font-bold' id='login-header'>Login</h2>
 
     <form class='login-form' id='login-form'>
       <div class=''>
@@ -24,27 +25,13 @@
       <div class=''>
         <button class='btn btn-primary' type='submit'>Deploy</button>
       </div>
-    </form>
-    <div id='email-signup' class='border border-gray-300 p-4 rounded-lg'>
-      <form class='flex flex-col space-y-4'>
-        <label for='email' class='text-white'>Email:</label>
-        <input
-          type='email'
-          id='email'
-          name='email'
-          placeholder='Enter your email'
-          class='px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-        />
-        <button
-          type='submit'
-          class='px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
-        >Subscribe</button>
-      </form>
     </div>
+    </form>
+
 
   </div>
   <div class='' id='signup-box'>
-    <h2 id='signup-header'>Signup</h2>
+    <h2 class='font-bold' id='signup-header'>Signup</h2>
 
     <form class='signup-form' id='signup-form'>
       <div class=''>
@@ -77,6 +64,25 @@
       <div class=''>
         <button class='btn btn-primary' type='submit'>Enlist</button>
       </div>
+    </form>
+  </div>
+</div>
+
+<div class="pt-5 flex justify-center">
+  <div id='email-signup' class='flex justify-center w-3/12 border border-gray-300 p-4 rounded-lg'>
+    <form class='flex flex-col space-y-4'>
+      <label for='email' class='text-white'>Email:</label>
+      <input
+        type='email'
+        id='email'
+        name='email'
+        placeholder='Enter your email'
+        class='px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+      />
+      <button
+        type='submit'
+        class='px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
+      >Subscribe</button>
     </form>
   </div>
 </div>
