@@ -1,75 +1,42 @@
-<div class='row'>
-  <div class='' id='login'>
-    <h2 id='login-header'>Login</h2>
+<div class="row">
+  <div class="col-md-6" id="login">
+    <h2 id="login-header">Login</h2>
 
-    <form class='login-form' id='login-form'>
-      <div class=''>
-        {{! <label for="email-login">email:</label> }}
-        <input
-          class='form-input'
-          type='text'
-          id='email-login'
-          placeholder='Email'
-        />
+    <form class="form login-form" id="login-form">
+      <div class="">
+        {{!-- <label for="email-login">email:</label> --}}
+        <input class="form-input" type="text" id="email-login" placeholder="Email"/>
       </div>
-      <div class=''>
-        {{! <label for="password-login">pass:</label> }}
-        <input
-          class='form-input'
-          type='password'
-          id='password-login'
-          placeholder='Password'
-        />
+      <div class="">
+        {{!-- <label for="password-login">pass:</label> --}}
+        <input class="form-input" type="password" id="password-login" placeholder="Password"/>
       </div>
-      <div class=''>
-        <button class='btn btn-primary' type='submit'>Deploy</button>
+      <div class="">
+        <button class="btn btn-primary" type="submit">Deploy</button>
       </div>
     </form>
-    <div id="email-signup" class="border border-gray-300 p-4 rounded-lg">
-  <form class="flex flex-col space-y-4">
-    <label for="email" class="text-white">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" class="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Subscribe</button>
-  </form>
-</div>
-
   </div>
-  <div class='text-red-500' id='signup-box'>
-    <h2 id='signup-header'>Signup</h2>
+  <div class="col-md-6" id="signup-box">
+    <h2 id="signup-header">Signup</h2>
 
-    <form class='signup-form' id='signup-form'>
-      <div class=''>
-        {{! <label for="name-signup">name:</label> }}
-        <input
-          class='form-input'
-          type='text'
-          id='name-signup'
-          placeholder='Username'
-        />
+    <form class="form signup-form" id="signup-form">
+      <div class="">
+        {{!-- <label for="name-signup">name:</label> --}}
+        <input class="form-input" type="text" id="name-signup" placeholder="Username"/>
       </div>
-      <div class=''>
-        {{! <label for="email-signup">email:</label> }}
-        <input
-          class='form-input'
-          type='text'
-          id='email-signup'
-          placeholder='Email'
-        />
+      <div class="">
+        {{!-- <label for="email-signup">email:</label> --}}
+        <input class="form-input" type="text" id="email-signup" placeholder="Email"/>
       </div>
-      <div class=''>
-        {{! <label for="password-signup">pass:</label> }}
-        <input
-          class='form-input'
-          type='password'
-          id='password-signup'
-          placeholder='Password'
-        />
+      <div class="">
+        {{!-- <label for="password-signup">pass:</label> --}}
+        <input class="form-input" type="password" id="password-signup" placeholder="Password"/>
       </div>
-      <div class=''>
-        <button class='btn btn-primary' type='submit'>Enlist</button>
+      <div class="">
+        <button class="btn btn-primary" type="submit">Enlist</button>
       </div>
     </form>
   </div>
 </div>
 
-<script src='./js/login.js'></script>
+<script src="./js/login.js"></script>
