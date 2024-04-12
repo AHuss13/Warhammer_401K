@@ -1,8 +1,31 @@
-<div>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>We Are Armies.... Bum Buh Dum Duh Dum Dum Dum 🎵</title>
+  </head>
+  <body>
+    <div>
 
-  <h2>ARMY NAME</h2>
-  <p>{{army.name}}</p>
-  <h3>Army Description</h3>
-  <p>{{army.description}}</p>
+      <h2>ARMY NAME</h2>
+      <p>{{army.name}}</p>
+      <h3>Army Description</h3>
+      <p>{{army.description}}</p>
 
-</div>
+    </div>
+
+    <button onclick='nateMode()'>Nate's Concert Mode
+    </button>
+
+    <style>
+      body { padding: 25px; background-color: white; color: black; font-size:
+      25px; } .concert-mode { background-color: black; color: white; }
+    </style>
+
+  </body>
+
+  <script>
+    function nateMode() { var element = document.body;
+    element.classList.toggle("concert-mode"); }
+  </script>
+</html>
