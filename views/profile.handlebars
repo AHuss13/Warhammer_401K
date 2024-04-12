@@ -26,16 +26,16 @@
   </form>
 </div>
 
-<h1>{{user.dataValues.name}}'s Army List</h1>
-{{#each user.dataValues.armies}}
+<div class="pl-5 w-auto">
+  <h1 class="text-4xl font-bold underline">{{user.dataValues.name}}'s Army List</h1>
+  {{#each user.dataValues.armies}}
 
-      <h4><a href="/api/army/newarmy/{{this.dataValues.id}}">{{this.dataValues.name}}</a></h4>
+      <h4 class="font-bold text-3xl"><a href="/api/army/newarmy/{{this.dataValues.id}}">{{this.dataValues.name}}</a></h4>
 
-  <li><strong>Army Name:</strong> {{ this.dataValues.name }}</li>
-  <li><strong>Description:</strong> {{ this.dataValues.description }}</li>
+  <li class="text-red-600 font-bold text-2xl"><strong>Army Name:</strong> {{ this.dataValues.name }}</li>
+  <li class="text-red-600 font-bold text-2xl"><strong>Description:</strong> {{ this.dataValues.description }}</li>
   <br> </br>
-{{/each}}
-
+    {{/each}}
 </div>
 
 <script src="./js/profile.js"></script>
